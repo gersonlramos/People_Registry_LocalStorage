@@ -36,9 +36,9 @@ Ao lado dos nomes cadastrados, existem dois botões: "Editar" e "Excluir".
 * **Excluir**: Para excluir o registro, basta clicar no botão "Excluir" e confirmar a mensagem de exclusão.
 * **Editar**: Para editar, clique no botão "Editar". O registro será carregado nos campos de cadastro, onde você pode fazer as alterações necessárias e salvar novamente.
 
-### Screenshot
+### Visualização do projeto
 
-![Cadastro de Pessoas](Cadastro_Pessoas.png)
+![Cadastro de Pessoas](.src/images/Cadastro_Pessoas.gif)
 
 ## Passo a Passo da Criação
 
