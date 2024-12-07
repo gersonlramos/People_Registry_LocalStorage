@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1d1d1d;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in;
+    padding: 0 10px;
+}
+
+.container {
+    width: calc(100% - 80px); /* Adjust container to have 40px margins */
+    max-width: 1200px; /* Optional maximum width for large screens */
+    background-color: #2c2c2c;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    text-align: center; /* Center align elements within the container */
+    animation: slideIn 1s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of form elements */
+    justify-content: space-between; /* Distribute inputs evenly */
+    gap: 20px; /* Space between input fields */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 20px); /* Each field takes 50% width minus the gap */
+    min-width: 250px; /* Ensures fields are not too small */
+}
+
+label {
+    margin-bottom: 5px;
+    text-align: left; /* Align labels to the left */
+    width: 100%; /* Full width of container */
+    display: block; /* Separate label from input field */
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    align-self: center;
+    margin-top: 20px; /* Add spacing above the button */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Makes the button a block element to center it */
+    width: calc(100% - 40px);
+    max-width: 300px; /* Adjust width dynamically based on content */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#filtro-nome {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+ul#lista-pessoas {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#lista-pessoas li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    color: #fff;
+    border: 2px solid #fff; /* Adds a white border around each record */
+}
+
+ul#lista-pessoas li .info {
+    margin-bottom: 10px; /* Adds space between info and buttons */
+}
+
+ul#lista-pessoas li .actions {
+    display: flex; /* Arrange buttons side by side */
+    gap: 5px; /* Space between buttons */
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-left: auto; /* Ensure the buttons are pushed to the far-right */
+}
+
+ul#lista-pessoas li .actions button {
+    padding: 5px 10px; /* Auto-size based on content */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    transition: background-color 0.3s ease;
+    
+}
+
+ul#lista-pessoas li .actions button.remover {
+    background-color: #ff4d4d; /* Red color for Remover button */
+    border: 1px solid #ff4d4d; /* Border to maintain consistent size */
+}
+
+ul#lista-pessoas li .actions button.remover:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+ul#lista-pessoas li .actions button.editar {
+    background-color: #007bff; /* Blue color for Editar button */
+    border: 1px solid #007bff; /* Border to maintain consistent size */
+    
+}
+
+ul#lista-pessoas li .actions button.editar:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
