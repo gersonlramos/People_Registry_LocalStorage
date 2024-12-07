@@ -38,7 +38,7 @@ Ao lado dos nomes cadastrados, existem dois botões: "Editar" e "Excluir".
 
 ### Visualização do projeto
 
-![Cadastro de Pessoas](.src/images/Cadastro_Pessoas.gif)
+![Cadastro de Pessoas](src/images/Cadastro_Pessoas.gif)
 
 ## Passo a Passo da Criação
 
