@@ -1,0 +1,14 @@
+{
+  "name": "people-registry-localstorage",
+  "version": "1.0.0",
+  "description": "A JavaScript-based client-side application for managing personal contacts with LocalStorage",
+  "type": "module",
+  "main": "src/js/main.js",
+  "scripts": {
+    "test": "node test_date_format.js",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": ["javascript", "localstorage", "crud", "contacts"],
+  "author": "Gerson Ramos",
+  "license": "MIT"
+}

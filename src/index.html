@@ -1,46 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema de Cadastro</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>Sistema de Cadastro</h1>
-        <form id="formulario-cadastro">
-            <input type="hidden" id="indice" />
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" required placeholder="Digite o nome"/>
-            </div>
-            <div class="form-group">
-                <label for="dataNascimento">Data de Nascimento:</label>
-                <input type="date" id="dataNascimento" required />
-            </div>
-            <div class="form-group">
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" required placeholder="(xx) xxxxx-xxxx"/>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" required placeholder="Digite o e-mail"/>
-            </div>
-            <button type="submit">Salvar</button>
-        </form>
-        
-        
+      <header class="header">
+        <h1 id="main-title">Sistema de Cadastro</h1>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Alternar tema"
+          title="Alternar entre tema claro e escuro"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
+      </header>
 
-        <h2>Lista de Pessoas Cadastradas</h2>
-        <input type="text" id="filtro-nome" placeholder="Filtrar por nome">
-        <ul id="lista-pessoas"></ul>
+      <main>
+        <section aria-labelledby="form-title">
+          <h2 id="form-title" class="sr-only">Formulário de Cadastro</h2>
+          <form
+            id="formulario-cadastro"
+            role="form"
+            aria-label="Cadastro de pessoa"
+          >
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input
+                type="text"
+                id="nome"
+                required
+                placeholder=" "
+                aria-describedby="nome-help"
+                autocomplete="name"
+              />
+              <div id="nome-help" class="sr-only">
+                Digite o nome completo da pessoa
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="dataNascimento">Data de Nascimento</label>
+              <input
+                type="text"
+                id="dataNascimento"
+                required
+                placeholder=" "
+                aria-describedby="data-help"
+                autocomplete="bday"
+                data-date-format="dd/mm/yyyy"
+                maxlength="10"
+                pattern="\d{2}/\d{2}/\d{4}"
+              />
+              <div id="data-help" class="sr-only">
+                Selecione a data de nascimento
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input
+                type="tel"
+                id="telefone"
+                required
+                placeholder=" "
+                aria-describedby="telefone-help"
+                autocomplete="tel"
+              />
+              <div id="telefone-help" class="sr-only">
+                Digite o telefone no formato brasileiro
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder=" "
+                aria-describedby="email-help"
+                autocomplete="email"
+              />
+              <div id="email-help" class="sr-only">
+                Digite um endereço de email válido
+              </div>
+            </div>
+            <button type="submit" aria-describedby="submit-help">
+              <span class="button-text">Salvar</span>
+            </button>
+            <div id="submit-help" class="sr-only">
+              Clique para salvar os dados da pessoa
+            </div>
+          </form>
+        </section>
+
+        <section aria-labelledby="list-title">
+          <h2 id="list-title">Lista de Pessoas Cadastradas</h2>
+          <div class="search-container" role="search">
+            <label for="filtro-nome" class="sr-only">Buscar pessoas</label>
+            <input
+              type="text"
+              id="filtro-nome"
+              placeholder="Filtrar por nome, email ou telefone"
+              aria-describedby="search-help"
+              autocomplete="off"
+            />
+            <div id="search-help" class="sr-only">
+              Digite para filtrar a lista de pessoas
+            </div>
+            <button
+              id="clear-search"
+              class="clear-search-btn"
+              title="Limpar busca"
+              aria-label="Limpar campo de busca"
+            >
+              ✕
+            </button>
+          </div>
+          <ul
+            id="lista-pessoas"
+            role="list"
+            aria-live="polite"
+            aria-label="Lista de pessoas cadastradas"
+          ></ul>
+        </section>
+      </main>
     </div>
-    
 
-    <script src="script.js"></script>
-</body>
-
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>
