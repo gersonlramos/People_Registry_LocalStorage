@@ -70,7 +70,9 @@ People Registry is a client-side contact management application that leverages t
 
 ## 🎬 Demo
 
-![People Registry Demo](src/images/Cadastro_Pessoas.gif)
+<div align="center">
+  <img src="src/images/Cadastro_Pessoas.gif" alt="People Registry Demo" width="800">
+</div>
 
 *The application in action showing add, edit, delete, and search functionality*
 
